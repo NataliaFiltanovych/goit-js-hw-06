@@ -20,21 +20,15 @@ class StringBuilder {
   }
 
   padEnd(str) {
-    const newStr = this.#value.slice();
-    const str1 = `${newStr}${str}`;
-    this.#value = str1;
+    this.#value = `${this.#value}${str}`;
   }
 
   padStart(str) {
-    const newStr = this.#value.slice();
-    const str1 = `${str}${newStr}`;
-    this.#value = str1;
+    this.#value = `${str}${this.#value}`;
   }
 
   padBoth(str) {
-    const newStr = this.#value.slice();
-    const str1 = `${str}${newStr}${str}`;
-    this.#value = str1;
+    this.#value = `${str}${this.#value}${str}`;
   }
 }
 
